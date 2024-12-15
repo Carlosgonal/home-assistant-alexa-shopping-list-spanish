@@ -1,6 +1,6 @@
 # Alexa Shopping List to Home Assistant Synchroniser
 
-<a href="https://buymeacoffee.com/madmachinations" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https://buymeacoffee.com/Carlosgonal" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 This is a custom component for Home Assistant, which allows you to synchronise your Alexa Shopping List with the Home Assistant shopping list.
 
@@ -26,7 +26,7 @@ There are a few different ways to install the server:
 
 You can find pre-built containers on docker hub here:
 
-https://hub.docker.com/r/madmachinations/ha-alexa-shopping-list-sync
+https://hub.docker.com/r/Carlosgonal/ha-alexa-shopping-list-sync
 
 **When you run the container, make sure you mount a local directory into the container's `/config` path. This is where configuration and session data will be persisted.**
 
@@ -193,4 +193,4 @@ It was a fight to get the damn thing to work reliably, and I don't doubt it will
 
 If you like this thing and it works for you, and you have the means, then please consider buying me a coffee. Which if I'm honest I will definitely spend on beer and pizza. But sure let's call that "coffee".
 
-<a href="https://buymeacoffee.com/madmachinations" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https://buymeacoffee.com/Carlosgonal" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>

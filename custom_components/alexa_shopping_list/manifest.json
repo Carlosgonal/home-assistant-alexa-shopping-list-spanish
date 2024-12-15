@@ -1,7 +1,7 @@
 {
     "domain": "alexa_shopping_list",
     "name": "Alexa Shopping List",
-    "codeowners": ["@madmachinations"],
+    "codeowners": ["@Carlosgonal"],
     "dependencies": ["shopping_list"],
     "documentation": "https://gitlab.com/home-assistant-components/todoist-shopping-list/-/blob/main/README.md",
     "integration_type": "hub",
