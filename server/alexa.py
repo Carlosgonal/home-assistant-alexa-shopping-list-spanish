@@ -1,24 +1,29 @@
 #!/usr/bin/env python3
 
+import json
+import logging
+import os
+import time
+
 from selenium import webdriver
 from selenium.webdriver import ActionChains
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.actions.wheel_input import ScrollOrigin
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.actions.wheel_input import ScrollOrigin
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-import time
-import json
-import os
+from selenium.webdriver.support.ui import WebDriverWait
 
 WAIT_TIMEOUT=30
+logger = logging.getLogger(__name__)
 
 class AlexaShoppingList:
 
     def __init__(self, amazon_url: str = "amazon.co.uk", cookies_path: str = ""):
+        logger.info('Init Alexa Shopping List')
         self.amazon_url = amazon_url
         self.cookies_path = cookies_path
         self._setup_driver()
+        logger.info('Init Correctly')
 
 
     def __del__(self):
@@ -187,6 +192,7 @@ class AlexaShoppingList:
 
 
     def login(self, email: str, password: str):
+        logger.info('Login')
         self._selenium_get("https://www."+self.amazon_url, (By.ID, 'nav-link-accountList'))
 
         account_menu = self.driver.find_element(By.ID, 'nav-link-accountList')
@@ -195,6 +201,7 @@ class AlexaShoppingList:
         self.email = email
         self.password = password
 
+        logger.info('Handle login')
         self._handle_login()
 
         self.email = ""
@@ -203,6 +210,9 @@ class AlexaShoppingList:
         time.sleep(5)
         if self.login_requires_mfa() == False:
             self._login_successful()
+            logger.info('Login successful')
+
+        logger.info('End login')
 
 
     def _login_successful(self):
