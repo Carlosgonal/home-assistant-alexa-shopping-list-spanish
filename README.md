@@ -26,7 +26,7 @@ There are a few different ways to install the server:
 
 You can find pre-built containers on docker hub here:
 
-https://hub.docker.com/r/Carlosgonal/ha-alexa-shopping-list-sync
+https://hub.docker.com/r/carlosgonal/ha-alexa-shopping-list-spanish-sync
 
 **When you run the container, make sure you mount a local directory into the container's `/config` path. This is where configuration and session data will be persisted.**
 
